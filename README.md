@@ -49,7 +49,10 @@ Initialization phase:
 When I first design the whole structure of the project, I adopt the create-react-app process for easier process.
 I added parameters to let create-react-app include typescript as the default code format.
 
-Development phase:
+## Development notes:
+
+### Development phase:
+
 Then I did spend some time to get to know GraphQL. (I never used it before, honestly).
 Finally after reading the documents I got the aws-amplify installed and initialized the graphql api call. Bingo!
 Then I began to do the visual part.
@@ -58,24 +61,28 @@ Then I began to do the visual part.
 - Consider how to composite the components.
 - Design what parameters should be passed among components.
 
-Styling phase:
+### Styling phase:
+
 Then I installed scss to the project and began to do the styling.
 Modern react apps have '<meta name="viewport" content="width=device-width, initial-scale=1" />' added into the html template already.
 This provides a certain level of responsive ability to the page. However the layout could be completely diferrent sometimes to give the users the best feeling.
 So I chose the 'zeller-coding-challange-customer-lozenge' as the element that will be hidden when the page is less then 500px width.
 
-Performance tweaks:
+### Performance tweaks:
+
 Functional components are stateless. Thus they will rerender everytime their props/states change.
 Use React.memo could provide a way to compare previous props and new props. This is similar to the shouldComponentUpdate hook in class components.
 In react v18, the set state actions are batched even when they are in the async processes so we don't have to worry about it too much.
 
-Unit test phase:
+### Unit test phase:
+
 I set up a unit test suite for each component.
 I wrote some test cases and tried to cover each line of code.
 I am sure I still missed some extreme cases(e.g. what if a particular prop is not passed, etc)
 The coverage seems good although.
 
-Issues unsolved:
+### Issues unsolved:
+
 When the page is initialized, the graphql api will be called twice.
 I tried to figure out why but failed. I am pretty sure it's not due to the props/state changes of ZCustomerPage.
 I suspect that it is the way I used graphql that is causing this issue.
