@@ -1,0 +1,37 @@
+.zeller-coding-challange-customer {
+  margin-top: 15px;
+  .zeller-coding-challange-customer-lozenge {
+    background-color: lightblue;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .zeller-coding-challange-customer-info {
+    margin-left: 30px;
+    display: inline-block;
+    vertical-align: middle;
+
+    .zeller-coding-challange-customer-name {
+      h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+    }
+    .zeller-coding-challange-customer-role {
+      color: grey;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .zeller-coding-challange-customer {
+    .zeller-coding-challange-customer-lozenge {
+      display: none;
+    }
+  }
+}
